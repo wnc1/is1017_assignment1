@@ -1,0 +1,89 @@
+package edu.pitt.ui;
+
+import java.awt.Color;
+import java.awt.EventQueue;
+import java.sql.SQLException;
+import java.util.Vector;
+
+import javax.swing.JFrame;
+import javax.swing.JScrollPane;
+import javax.swing.JTable;
+import javax.swing.table.DefaultTableModel;
+
+import edu.pitt.bank.Account;
+import edu.pitt.bank.Transaction;
+import edu.pitt.utilities.DbUtilities;
+
+public class TransactionView {
+
+	private JFrame frmTransactions;
+	private JScrollPane transactionPane;
+	private JTable tblTransactions;
+	private Account currentAccount;
+	
+	/**
+	 * Create the application.
+	 */
+	public TransactionView(Account a) {
+		currentAccount = a;
+		initialize();
+	}
+
+	/**
+	 * Initialize the contents of the frame.
+	 */
+	private void initialize() {
+		frmTransactions = new JFrame();
+		frmTransactions.setTitle("Account Transactions");
+		frmTransactions.setBounds(100, 100, 450, 329);
+		frmTransactions.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
+		
+		//account list and object should be passed here
+		transactionPane = new JScrollPane();
+		frmTransactions.getContentPane().add(transactionPane);
+		
+		//in class stuff THIS will change
+		DbUtilities db = new DbUtilities();
+//		String[] columns = {"Transaction Type", "Account", "Amount"};
+		String sql = "SELECT type AS 'Transaction Type', transactionDate AS 'Date/Time', amount AS Amount from transaction ";
+				sql+= "WHERE accountID='" + currentAccount.getAccountID() + "';";
+				
+		Vector<Vector<Object>> data = new Vector<Vector<Object>>();
+		
+		//add column names
+		Vector<String> columns = new Vector<String>();
+		columns.add("Transaction Type");
+		columns.add("Account");
+		columns.add("Amount");
+		
+		//add transaction row data
+		for(Transaction t:currentAccount.getTransactions()){
+			Vector<Object> rows = new Vector<Object>();
+			rows.add(t.getType());
+			rows.add(t.getTransactionDate());
+			rows.add(t.getAmount());
+			
+			data.add(rows);
+		}
+		
+//		try {
+			
+			
+//			DefaultTableModel transactionList = db.getDataTable(d,columns);
+			DefaultTableModel transactionList = new DefaultTableModel(data,columns);
+			tblTransactions = new JTable(transactionList);
+			tblTransactions.setFillsViewportHeight(true);
+			tblTransactions.setShowGrid(true);
+			tblTransactions.setGridColor(Color.black);
+			transactionPane.setViewportView(tblTransactions);
+			
+//		} catch (SQLException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+		
+		frmTransactions.setVisible(true);
+		
+	}
+
+}

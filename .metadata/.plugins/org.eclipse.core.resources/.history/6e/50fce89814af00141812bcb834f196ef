@@ -1,0 +1,11 @@
+Sat Feb 07 16:20:19 EST 2015|Unknown column 'customerID' in 'where clause'
+Sat Feb 07 16:20:19 EST 2015|SELECT accountID FROM account where customerID='f7951f76-31b8-4cbd-8ff8-29d82b0a8cca';
+Sat Feb 07 16:23:52 EST 2015|Error log test: Test for echo
+Sat Feb 07 16:35:23 EST 2015|Error log test: Test for echo
+Sat Feb 07 16:35:33 EST 2015|Error log test: Test for echo
+Sat Feb 07 16:39:15 EST 2015|Error while loading customer accounts.
+Sat Feb 07 16:39:15 EST 2015|Column 'accountID' not found.
+Sat Feb 07 16:54:56 EST 2015|Error while loading customer accounts.
+Sat Feb 07 16:54:56 EST 2015|Column 'accountID' not found.
+Sat Feb 07 16:57:29 EST 2015|Error while loading customer accounts.
+Sat Feb 07 16:57:29 EST 2015|Column 'accountID' not found.

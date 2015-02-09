@@ -1,0 +1,2 @@
+Sat Feb 07 17:12:44 EST 2015|You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'c.fk_customerID='f7951f76-31b8-4cbd-8ff8-29d82b0a8cca'' at line 1
+Sat Feb 07 17:12:44 EST 2015|select a.* from customer_account c join account a ON a.accountID=c.fk_accountIDwhere c.fk_customerID='f7951f76-31b8-4cbd-8ff8-29d82b0a8cca';

@@ -1,0 +1,12 @@
+/**
+ * 
+ */
+package edu.pitt.utilities;
+
+/**
+ * @author bconner
+ *
+ */
+public interface DbUtilities {
+
+}

@@ -1,0 +1,60 @@
+package edu.pitt.ui;
+
+import java.awt.Color;
+import java.awt.EventQueue;
+import java.sql.SQLException;
+import javax.swing.JFrame;
+import javax.swing.JScrollPane;
+import javax.swing.JTable;
+import javax.swing.table.DefaultTableModel;
+import edu.pitt.bank.Account;
+import edu.pitt.utilities.DbUtilities;
+
+public class TransactionView {
+
+	private JFrame frame;
+	private JScrollPane transactionPane;
+	private JTable tblTransactions;
+	private Account currentAccount;
+	
+	/**
+	 * Create the application.
+	 */
+	public TransactionView(Account a) {
+		currentAccount = a;
+		initialize();
+	}
+
+	/**
+	 * Initialize the contents of the frame.
+	 */
+	private void initialize() {
+		frame = new JFrame();
+		frame.setBounds(100, 100, 450, 300);
+		frame.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
+		
+		//account list and object should be passed here
+		transactionPane = new JScrollPane();
+		frame.getContentPane().add(transactionPane);
+		
+		//in class stuff THIS will change
+		DbUtilities db = new DbUtilities();
+		String[] columns = {"Transaction ID", "Account", "Amount"};
+		String sql = "Select * from transaction;"; 
+		try {
+			DefaultTableModel transactionList = db.getDataTable(sql,columns);
+			tblTransactions = new JTable(transactionList);
+			tblTransactions.setFillsViewportHeight(true);
+			tblTransactions.setShowGrid(true);
+			tblTransactions.setGridColor(Color.black);
+			transactionPane.getViewport().add(tblTransactions);
+			
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+
+}

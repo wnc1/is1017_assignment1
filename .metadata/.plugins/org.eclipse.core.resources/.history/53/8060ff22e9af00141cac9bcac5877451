@@ -1,0 +1,92 @@
+package edu.pitt.ui;
+
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.Vector;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+import javax.swing.JScrollPane;
+import javax.swing.JTable;
+import javax.swing.table.DefaultTableModel;
+
+import edu.pitt.bank.Account;
+import edu.pitt.bank.Transaction;
+
+public class TransactionView {
+
+	private JFrame frmTransactions;
+	private JScrollPane transactionPane;
+	private JTable tblTransactions;
+	private Account currentAccount;
+	
+	/**
+	 * Create the application.
+	 */
+	public TransactionView(Account a) {
+		currentAccount = a;
+		initialize();
+	}
+
+	/**
+	 * Initialize the contents of the frame.
+	 */
+	private void initialize() {
+		try {	
+			frmTransactions = new JFrame();
+			frmTransactions.setTitle("Account Transactions");
+			frmTransactions.setBounds(100, 100, 450, 329);
+			frmTransactions.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
+					
+			//account list and object should be passed here
+			transactionPane = new JScrollPane();
+			frmTransactions.getContentPane().add(transactionPane);
+			
+			JButton btnClose = new JButton("Close");
+			btnClose.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent e) {
+					System.exit(0);
+				}
+			});	
+			frmTransactions.getContentPane().add(btnClose, BorderLayout.PAGE_END);
+			
+			//Begin loading transaction data
+			Vector<Vector<Object>> data = new Vector<Vector<Object>>();
+			//add Header column names
+			Vector<String> columns = new Vector<String>();
+			columns.add("Transaction Type");
+			columns.add("Date/Time");
+			columns.add("Amount");
+			
+			//populate the  transaction row data
+			for(Transaction t:currentAccount.getTransactions()){
+				Vector<Object> rows = new Vector<Object>();
+				rows.add(t.getType());
+				rows.add(AccountDetailsView.dateFormat.format(t.getTransactionDate()));
+				rows.add(AccountDetailsView.moneyFormat.format(t.getAmount()));
+				
+				data.add(rows);
+			}			
+			
+			// add data and columns names into a table model
+			DefaultTableModel transactionList = new DefaultTableModel(data,columns);
+			
+			tblTransactions = new JTable(transactionList);
+			tblTransactions.setFillsViewportHeight(true);
+			tblTransactions.setShowGrid(true);
+			tblTransactions.setGridColor(Color.black);
+			transactionPane.getViewport().add(tblTransactions);
+			frmTransactions.setVisible(true);
+			
+		} catch (NullPointerException e) {
+			JOptionPane.showMessageDialog(null, "There are no previous transactions for this account.");
+			currentAccount = null;
+		}
+				
+		
+	}
+
+}

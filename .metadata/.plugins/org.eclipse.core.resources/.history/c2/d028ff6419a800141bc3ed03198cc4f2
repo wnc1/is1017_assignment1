@@ -1,0 +1,23 @@
+package edu.pitt.bank;
+
+import java.sql.ResultSet;
+
+import edu.pitt.utilities.DbUtilities;
+
+public class Security {
+	public Customer validateLogin(String loginName, int pin){
+		String sql = "SELECT * FROM customer WHERE loginName= '" + loginName + "' AND pin=" + pin +";";
+		System.out.println(sql);
+		DbUtilities db = new DbUtilities();
+		
+		try{
+			ResultSet rs = db.getResultSet(sql);
+			if(rs.next()){
+				Customer cust = new Customer(rs.getString("customerID"));	
+			}
+		}catch (SQLException e){
+			e.printStackTrace();
+		}
+		return null;
+	}
+}

@@ -1,0 +1,24 @@
+Sun Feb 01 16:34:10 EST 2015|Unknown column '01b9f986' in 'where clause'
+Sun Feb 01 16:34:10 EST 2015|SELECT * FROM customer_account WHERE fk_customerID = 01b9f986-5d41-11e3-94ef-97beef767f1d;
+Sun Feb 01 16:35:03 EST 2015|You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE fk_customerID = '16c5da2a-5d41-11e3-94ef-97beef767f1d'' at line 1
+Sun Feb 01 16:35:03 EST 2015|SELECT * FROM customer_account WHERE fk_customerID = '01b9f986-5d41-11e3-94ef-97beef767f1d';WHERE fk_customerID = '16c5da2a-5d41-11e3-94ef-97beef767f1d';
+Sun Feb 01 16:36:19 EST 2015|You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE fk_customerID = '16c5da2a-5d41-11e3-94ef-97beef767f1d'' at line 1
+Sun Feb 01 16:36:19 EST 2015|SELECT * FROM customer_account WHERE fk_customerID = '01b9f986-5d41-11e3-94ef-97beef767f1d';WHERE fk_customerID = '16c5da2a-5d41-11e3-94ef-97beef767f1d';
+Sun Feb 01 21:51:37 EST 2015|Pin number mismatch type.
+Sun Feb 01 21:51:37 EST 2015|For input string: "ddd"
+Sun Feb 08 15:32:41 EST 2015|null
+Sun Feb 08 15:32:41 EST 2015|SELECT * FROM account WHERE accountID = '00ae9c2a-5d43-11e3-94ef-97beef767f1d';
+Sun Feb 08 22:27:53 EST 2015|Missing account information. Possible data referential integrity loss.
+Sun Feb 08 22:27:53 EST 2015|null
+Sun Feb 08 22:27:55 EST 2015|Missing account information. Possible data referential integrity loss.
+Sun Feb 08 22:27:55 EST 2015|null
+Sun Feb 08 22:28:00 EST 2015|Missing account information. Possible data referential integrity loss.
+Sun Feb 08 22:28:00 EST 2015|null
+Sun Feb 08 22:28:03 EST 2015|Missing account information. Possible data referential integrity loss.
+Sun Feb 08 22:28:03 EST 2015|null
+Sun Feb 08 22:28:04 EST 2015|Missing account information. Possible data referential integrity loss.
+Sun Feb 08 22:28:04 EST 2015|null
+Sun Feb 08 22:31:26 EST 2015|Missing account information. Possible data referential integrity loss.
+Sun Feb 08 22:31:27 EST 2015|null
+Sun Feb 08 22:42:35 EST 2015|Missing account information. Possible data referential integrity loss.
+Sun Feb 08 22:42:35 EST 2015|No account found for customerID f7951f76-31b8-4cbd-8ff8-29d82b0a8cca

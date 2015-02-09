@@ -1,0 +1,24 @@
+package edu.pitt.bank;
+
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.text.SimpleDateFormat;
+import java.util.UUID;
+import java.util.Date;
+
+import edu.pitt.utilities.DbUtilities;
+import edu.pitt.utilities.ErrorLogger;
+
+public class Tester{
+	public static void main(String[] args) {
+		//test account
+		Account mine = new Account("00ae9c2a-5d43-11e3-94ef-97beef767f1d");
+		System.out.println(mine.getType());
+		
+		for (Transaction t : mine.getTransactions()) {
+			System.out.println(t.getAmount());
+		}
+		//Transaction atm = new Transaction("00ae9c2a-5d43-11e3-94ef-97beef767f1d", "deposit", 100, 3333);
+
+	}
+}

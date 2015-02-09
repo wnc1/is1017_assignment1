@@ -1,0 +1,8 @@
+Wed Jan 28 22:27:55 EST 2015|You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '= '00ae9c2a-5d43-11e3-94ef-97beef767f1d'' at line 1
+Wed Jan 28 22:27:55 EST 2015|SELECT * FROM transactionWHERE accountId = '00ae9c2a-5d43-11e3-94ef-97beef767f1d';
+Wed Jan 28 22:30:57 EST 2015|You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '= '00ae9c2a-5d43-11e3-94ef-97beef767f1d'' at line 1
+Wed Jan 28 22:30:57 EST 2015|SELECT transactionID FROM transactionWHERE accountId = '00ae9c2a-5d43-11e3-94ef-97beef767f1d';
+Wed Jan 28 22:31:20 EST 2015|You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '= '00ae9c2a-5d43-11e3-94ef-97beef767f1d'' at line 1
+Wed Jan 28 22:31:20 EST 2015|SELECT transactionID FROM transactionWHERE accountId = '00ae9c2a-5d43-11e3-94ef-97beef767f1d';
+Wed Jan 28 22:34:31 EST 2015|You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '= '00ae9c2a-5d43-11e3-94ef-97beef767f1d'' at line 1
+Wed Jan 28 22:34:31 EST 2015|SELECT transactionID FROM transactionWHERE accountId = '00ae9c2a-5d43-11e3-94ef-97beef767f1d';

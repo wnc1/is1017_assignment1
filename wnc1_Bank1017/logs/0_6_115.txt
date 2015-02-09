@@ -1,0 +1,2 @@
+Sat Jan 31 18:10:22 EST 2015|Field 'streetAddress' doesn't have a default value
+Sat Jan 31 18:10:22 EST 2015|INSERT INTO customer (customerID, firstName, lastName, ssn, loginName, pin)  VALUES ('ae4d3e16-0f94-43e5-9f4b-49b5a0c2d5d2', 'Bucky', 'Barnes', '555-34-5222', 'bbarnes', 1234);
