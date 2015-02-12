@@ -21,11 +21,6 @@ import javax.swing.JButton;
 import javax.swing.UIManager;
 import java.awt.Color;
 
-/**
- * Provides the account view for the application.
- * @author bconner
- *
- */
 public class AccountDetailsView {
 	protected static NumberFormat moneyFormat = NumberFormat.getCurrencyInstance(Locale.US);
     protected static NumberFormat percentFormat = NumberFormat.getPercentInstance(Locale.ENGLISH);

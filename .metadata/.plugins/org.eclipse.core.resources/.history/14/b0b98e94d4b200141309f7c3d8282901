@@ -7,11 +7,6 @@ import java.text.SimpleDateFormat;
 import java.util.UUID;
 import edu.pitt.utilities.*;
 
-/**
- * Provides a data modal and functionality for account transactions
- * @author bconner
- *
- */
 public class Transaction {
 	private String transactionID;
 	private String accountID;

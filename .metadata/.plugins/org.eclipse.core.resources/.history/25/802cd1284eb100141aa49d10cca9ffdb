@@ -3,12 +3,9 @@ package edu.pitt.bank;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+
 import edu.pitt.utilities.*;
-/**
- * Provides the foundation for the bank account application
- * @author bconner
- *
- */
+
 public class Bank {
 	private ArrayList<Account> accountList = new ArrayList<Account>();
 	private ArrayList<Customer>customerList = new ArrayList<Customer>();
@@ -88,6 +85,8 @@ public class Bank {
 /////////////////////////////////////////////////
 //				PRIVATE
 /////////////////////////////////////////////////
+	
+
 
 	/**
 	 * Retrieves all accounts from the database

@@ -19,11 +19,6 @@ import edu.pitt.utilities.ErrorLogger;
 
 import java.awt.FlowLayout;
 
-/**
- * Provides the list view for transaction
- * @author bconner
- *
- */
 public class TransactionView {
 	private static final String COL_HEADER_TYPE = "Transaction Type";
 	private static final String COL_HEADER_DATE = "Date/Time";

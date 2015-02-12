@@ -19,11 +19,6 @@ import java.awt.event.ActionEvent;
 
 import javax.swing.JPasswordField;
 
-/**
- * provides the login view for the application.
- * @author bconner
- *
- */
 public class LoginView {
 
 	private JFrame frmLogin;

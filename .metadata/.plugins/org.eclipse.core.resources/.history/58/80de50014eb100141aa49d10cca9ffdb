@@ -11,11 +11,7 @@ import java.util.UUID;
 import java.util.Vector;
 
 import edu.pitt.utilities.*;
-/**
- * Provides a data model for an account as well as additional methods.
- * @author bconner
- *
- */
+
 public class Account {
 	public static final String ACTIVE_ACCOUNT_STATUS = "active";
 	private String accountID;
@@ -31,7 +27,7 @@ public class Account {
     protected static SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
 	
 	/**
-	 * Constructs an instance of an existing account
+	 * Constructor for creating an instance of an existing account
 	 * @param accountID
 	 */
 	public Account(String accountID){
@@ -75,7 +71,7 @@ public class Account {
 	}
 	
 	/**
-	 * Constructs a new account
+	 * Constructor for creating a new account
 	 * @param accountType
 	 * @param initialBalance
 	 */

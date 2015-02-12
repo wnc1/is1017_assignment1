@@ -12,7 +12,7 @@ import java.util.Vector;
 
 import edu.pitt.utilities.*;
 /**
- * Provides a data model for an account as well as additional methods.
+ * Creates an instance of an account.
  * @author bconner
  *
  */

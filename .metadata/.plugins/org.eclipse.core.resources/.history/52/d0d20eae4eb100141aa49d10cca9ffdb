@@ -5,11 +5,6 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import edu.pitt.utilities.*;
 
-/**
- * Provides login functionality and a model for user group permissions.
- * @author bconner
- *
- */
 public class Security {
 	private String userID;
 	private ArrayList<String> userGroups = new ArrayList<String>();
@@ -49,11 +44,6 @@ public class Security {
 		return cust;
 	}
 	
-	/**
-	 * Retrieves the group permissions for a given user.
-	 * @param userID
-	 * @return <code>ArrayList</code> of <code>Strings<code>
-	 */
 	public ArrayList<String> listUserGroups(String userID){
 		ResultSet rs = null;
 		DbUtilities db = new MySqlUtilities();

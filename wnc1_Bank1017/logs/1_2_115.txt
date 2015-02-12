@@ -1,0 +1,6 @@
+Tue Feb 10 10:46:51 EST 2015|Missing account information. Possible data referential integrity loss.
+Tue Feb 10 10:46:51 EST 2015|Deposit attempt failed. No account found for customerID f7951f76-31b8-4cbd-8ff8-29d82b0a8cca
+Tue Feb 10 10:47:03 EST 2015|Missing account information. Possible data referential integrity loss.
+Tue Feb 10 10:47:03 EST 2015|Withdaw attempt failed. No account found for customerID f7951f76-31b8-4cbd-8ff8-29d82b0a8cca
+Tue Feb 10 10:47:08 EST 2015|Missing account information. Possible data referential integrity loss.
+Tue Feb 10 10:47:08 EST 2015|Transaction view attempt failed. No account found for logged in user.
