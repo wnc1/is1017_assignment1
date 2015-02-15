@@ -219,22 +219,16 @@ public class AccountDetailsView {
 		//finally display the form
 		frmAccountDetails.setVisible(true);
 		
-		//timer to end application after a minute
+		//timer
 		Timer timer = new Timer();
-		 timer.schedule(new SessionEnd(), 60000);
-	}
+		timer.scheduleAtFixedRate(new TimerTask() {
+			@Override
+				public void run() {
+					JOptionPane.showMessageDialog(null, "Your session has automaticlaly expired for security purposes.");
+					System.exit(0);
+				}
+			}, new Date(), 5000);
 	
-	/**
-	 * Timed task  object to end the application after a certain time
-	 * references subclass version from http://www.java2s.com/
-	 *
-	 */
-	class SessionEnd extends TimerTask{
-		public void run() {
-			frmAccountDetails.setVisible(false);
-			JOptionPane.showMessageDialog(null, "Your session has automaticlaly expired for security purposes. Application closing.");
-			System.exit(0);
-		}
 	}
 	
 	/**

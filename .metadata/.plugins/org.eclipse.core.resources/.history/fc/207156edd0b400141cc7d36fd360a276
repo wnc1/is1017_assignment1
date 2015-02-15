@@ -1,33 +1,24 @@
 package edu.pitt.ui;
 
 import javax.swing.JFrame;
-
 import edu.pitt.bank.Account;
 import edu.pitt.bank.Bank;
 import edu.pitt.bank.Customer;
 import edu.pitt.utilities.ErrorLogger;
-
 import javax.swing.JTextArea;
-
-import java.util.Date;
+import java.sql.Date;
 import java.text.NumberFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Locale;
-import java.util.Timer;
-import java.util.TimerTask;
-
 import javax.swing.JComboBox;
-
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
-
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 import javax.swing.JButton;
 import javax.swing.UIManager;
-
 import java.awt.Color;
 
 /**
@@ -218,23 +209,7 @@ public class AccountDetailsView {
 
 		//finally display the form
 		frmAccountDetails.setVisible(true);
-		
-		//timer to end application after a minute
-		Timer timer = new Timer();
-		 timer.schedule(new SessionEnd(), 60000);
-	}
 	
-	/**
-	 * Timed task  object to end the application after a certain time
-	 * references subclass version from http://www.java2s.com/
-	 *
-	 */
-	class SessionEnd extends TimerTask{
-		public void run() {
-			frmAccountDetails.setVisible(false);
-			JOptionPane.showMessageDialog(null, "Your session has automaticlaly expired for security purposes. Application closing.");
-			System.exit(0);
-		}
 	}
 	
 	/**

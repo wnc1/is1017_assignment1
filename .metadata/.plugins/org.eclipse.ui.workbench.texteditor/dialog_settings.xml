@@ -3,18 +3,19 @@
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
 		<item value="595" key="DIALOG_WIDTH"/>
 		<item value="87" key="DIALOG_Y_ORIGIN"/>
+		<item value="845" key="DIALOG_X_ORIGIN"/>
 		<item value="399" key="DIALOG_HEIGHT"/>
-		<item value="973" key="DIALOG_X_ORIGIN"/>
 		<item value="1|.Helvetica Neue DeskInterface|11.0|0|COCOA|1|.HelveticaNeueDeskInterface-Regular" key="DIALOG_FONT_NAME"/>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="true" key="wrap"/>
-		<item value="false" key="isRegEx"/>
 		<item value="false" key="casesensitive"/>
+		<item value="false" key="isRegEx"/>
 		<item value="false" key="incremental"/>
 		<item value="false" key="wholeword"/>
-		<item value="Button" key="selection"/>
+		<item value="Exit" key="selection"/>
 		<list key="findhistory">
+			<item value="exit"/>
 			<item value="button"/>
 			<item value="MySqlUtilities db = new MySqlUtilities()"/>
 			<item value="title"/>

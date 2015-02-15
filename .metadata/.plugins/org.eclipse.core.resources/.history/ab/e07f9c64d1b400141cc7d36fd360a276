@@ -9,13 +9,12 @@ import edu.pitt.utilities.ErrorLogger;
 
 import javax.swing.JTextArea;
 
-import java.util.Date;
+import java.sql.Date;
 import java.text.NumberFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Locale;
 import java.util.Timer;
-import java.util.TimerTask;
 
 import javax.swing.JComboBox;
 
@@ -219,22 +218,16 @@ public class AccountDetailsView {
 		//finally display the form
 		frmAccountDetails.setVisible(true);
 		
-		//timer to end application after a minute
+		//timer
 		Timer timer = new Timer();
-		 timer.schedule(new SessionEnd(), 60000);
-	}
+		timer.scheduleAtFixedRate(new TimerTask() {
+			@Override
+				public void run() {
+					JOptionPane.showMessageDialog(null, "Your session has automaticlaly expired for security purposes.");
+
+				}
+			}, new Date(), 5000);
 	
-	/**
-	 * Timed task  object to end the application after a certain time
-	 * references subclass version from http://www.java2s.com/
-	 *
-	 */
-	class SessionEnd extends TimerTask{
-		public void run() {
-			frmAccountDetails.setVisible(false);
-			JOptionPane.showMessageDialog(null, "Your session has automaticlaly expired for security purposes. Application closing.");
-			System.exit(0);
-		}
 	}
 	
 	/**
